@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.twitterapp.ui.InputHandleViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.InputHandleActivity">
+
+        <EditText
+            android:id="@+id/twitterHandleInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_24"
+            android:layout_marginLeft="@dimen/size_24"
+            android:layout_marginEnd="@dimen/size_24"
+            android:layout_marginRight="@dimen/size_24"
+            android:hint="@string/insert_twitter_handle"
+            android:inputType="text"
+            android:text="@={viewModel.userHandle}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill" />
+
+        <Button
+            android:id="@+id/submitHandle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_48"
+            android:text="@string/submit"
+            app:editText="@{twitterHandleInput}"
+            app:handle="@{viewModel.userHandle}"
+            app:layout_constraintEnd_toEndOf="@+id/twitterHandleInput"
+            app:layout_constraintStart_toStartOf="@+id/twitterHandleInput"
+            app:layout_constraintTop_toBottomOf="@+id/twitterHandleInput" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

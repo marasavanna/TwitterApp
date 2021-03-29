@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TwitterApp</string>
+
+    <string name="insert_twitter_handle">Insert Twitter handle</string>
+    <string name="submit">Submit</string>
+    <string name="empty_handle_error_message">Please enter a valid handle first</string>
+    <string name="empty_tweet_placeholder_message">User not found, please try another.</string>
+</resources>
